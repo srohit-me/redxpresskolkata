@@ -1,0 +1,98 @@
+---
+permalink: /menu/
+---
+
+
+<!DOCTYPE html>
+<html amp lang="en">
+
+<head>
+
+	<title>Red Xpress &ndash; Restaurant &amp; Pub</title>
+	
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="copyright" content="Copyright 2016 - Revellerz Pvt Ltd - All right reserved">
+	<meta name="robots" content="index,nofollow"> <!-- no need to index internal links -->
+
+	<!-- EXTERNAL -->
+	<link rel="canonical" href="https://redxpresskolkata.com/menu/">
+	<link rel="shortcut icon" href='/favicon.ico' type="image/x-icon">
+	<link rel="shortcut icon" href="/logo.svg" type="image/svg+xml" sizes="any">
+	<link rel="preconnect dns-prefetch" href="https://fonts.gstatic.com/" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"> 
+		
+	<!-- CSS -->
+	{% capture styles %} {% include_relative _sass/menu.scss %} {% endcapture %}
+	<style amp-custom> {{ styles | scssify }} </style>
+	<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+	<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+	<!-- AMP elements -->
+	<script async src="https://cdn.ampproject.org/v0.js"></script>
+	<script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
+	<script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
+	<script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
+    
+</head>
+
+<body>
+
+
+	<amp-selector class="tabs-with-selector" role="tablist" on="select:main.toggle(index=event.targetOption, value=true)" keyboard-select-mode="focus">
+		<nav>
+		<a href="/" id=logo> <amp-img src="/logo.svg" height=32 width=32 layout="fixed"></amp-img> </a>
+		<a href="#food" role="tab" aria-controls="food-tab"   option="0" selected> {% include _icon name="food"   %} <span>Food  </span> </a>
+		<a href="#bar"    role="tab" aria-controls="bar-tab"    option="1" >         {% include _icon name="bar"    %} <span>Bar   </span> </a>
+		<a href="#hookah" role="tab" aria-controls="hookah-tab" option="2" >         {% include _icon name="hookah" %} <span>Hookah</span> </a>
+		<a href="#buffet" role="tab" aria-controls="buffet-tab" option="3" >         {% include _icon name="buffet" %} <span>Buffet</span> </a>
+		</nav>
+	</amp-selector>
+
+	<main>
+
+		<amp-selector id="main" class="tabpanels">
+			
+			<section id="food" role="tabpanel" aria-labelledby="food-menu" option selected>
+				<amp-carousel lightbox layout="fill" type="slides" autoplay>
+					{% for i in (0..11) %}
+						<amp-img lightbox layout="fill" src= "/img/food-{{i}}.webp" >
+							<amp-img fallback layout="fill" src= "/img/jpg/food-{{i}}.jpg"></amp-img>
+						</amp-img>
+					{% endfor %}
+				</amp-carousel>
+			</section>
+
+			<section id="bar"    role="tabpanel" aria-labelledby="bar-menu" option>
+				<amp-carousel lightbox layout="fill" type="slides" autoplay>
+					{% for i in (0..11) %}
+						<amp-img lightbox layout="fill" src= "/img/bar-{{i}}.webp" >
+							<amp-img fallback layout="fill" src= "/img/jpg/bar-{{i}}.jpg"></amp-img>
+						</amp-img>
+					{% endfor %}
+				</amp-carousel>
+			</section>
+
+			<section id="hookah" role="tabpanel" aria-labelledby="hookah-menu" option>
+				<div>
+					<amp-img lightbox layout="fill" src= "/img/hookah.webp">
+							<amp-img fallback layout="fill" src= "/img/jpg/hookah.jpg"></amp-img>
+					</amp-img>
+				</div>
+			</section>
+
+			<section id="buffet" role="tabpanel" aria-labelledby="buffet-menu" option>
+				<div>
+					<amp-img lightbox layout="fill" src= "/img/buffet.webp" >
+						<amp-img fallback layout="fill" src= "/img/jpg/buffet.jpg"></amp-img>
+					</amp-img>
+				</div>
+			</section>
+
+		</amp-selector>
+	</main>
+
+</body>
+
+</html>

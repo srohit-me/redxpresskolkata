@@ -1,0 +1,101 @@
+<header>
+	
+	<!-- carousel -->
+	<div class="carousel">
+		<amp-carousel lightbox layout="fill" type="slides" autoplay>
+			{% assign favs = "1 18 9 13 5 19" | split: " " %}
+			{% for i in favs %}
+			<div>
+				<amp-img lightbox layout="fill" 
+						src=	"/img/{{i}}.webp" 
+						srcset=	"/img/s{{i}}.webp 480w, 
+								 /img/{{i}}.webp 1920w" >
+					<amp-img fallback layout="fill" 
+						src=	"/img/jpg/{{i}}.jpg" 
+						srcset= "/img/jpg/s{{i}}.jpg 480w, 
+								 /img/jpg/{{i}}.jpg 1920w">
+					</amp-img>
+				</amp-img>
+			</div>
+			{% endfor %}
+		</amp-carousel>
+	</div>
+	
+	<!-- logo -->
+	<div id="logo">
+		<amp-img alt=logo src="/logo.svg" height=64 width=64 layout="fixed"></amp-img>
+		<div>
+			<i>RED XPRESS</i>
+			<span>Restaurant <i>&amp;</i> Pub </span>
+		</div>
+	</div>
+	
+	<!-- information -->
+	<div class="wrapper">
+		
+		<!-- address -->
+		<div>
+			{% include _icon name="address" %}
+			<address>
+				Bengal Intelligent Park,<br>
+				Sector V, EP-GP Block,<br>
+				Salt Lake, Kolkata &ndash; 91
+			</address>
+			<a target=_blank class="button hollow" href=http://google.com/maps/dir/current+location/Red+Xpress,+Bengal+Intelligent+Park> DIRECTIONS </a>
+		</div>
+		
+		<!-- contact -->
+		<div>
+			{% include _icon name="phone" %}
+			<span>
+				<a href=tel:+913323576262>2357 6262</a> / <a href=tel:+913323570326>0326</a> <span>(BSNL)</span> <br>
+				<a href=tel:+913340035265>4003 5265</a> <span>(Airtel)</span>
+			</span>
+			{% include _icon name="mobile" %}
+			<span>
+				<a href=tel:+917890453600>7890 453 600</a>
+			</span>
+		</div>
+		
+		<!-- social -->
+		<div>
+			{% include _icon name="time" %}
+			<span>
+				12 noon &ndash; 12 midnight <br>
+				<i>all week</i>
+			</span>
+			<span>
+				<a title=Zomato target=_blank href="https://www.zomato.com/kolkata/red-xpress-sector-5-salt-lake"> 
+					<amp-img src=https://b.zmtcdn.com/images/logo/zomato_logo_2017.png layout=fill>
+				</a>
+				<a title=Swiggy target=_blank href="http://www.swiggy.com/kolkata/red-hot-chilli-pepper-sector-5-salt-lake-salt-lake">
+					<amp-img src=https://res.cloudinary.com/swiggy/image/upload/portal/c/icon-192x192.png layout=fill>
+				</a>
+				<a title=UberEats target=_blank href="https://www.ubereats.com/en-IN/kolkata/food-delivery/red-xpress/5NoRlLKnSs6L4WsJtQ4rXQ/">
+					<amp-img src=https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/0c6de4f0b3884eb89b28a29ecbc10d59.svg layout=fill>
+				</a>
+				<a title=Dineout target=_blank href="http://www.dineout.co.in/kolkata/red-xpress-salt-lake-east-kolkata-22509">
+					<amp-img src=https://st1.dineout-cdn.co.in/images/uploads/misc/2019/Apr/26/android-icon-192r.png layout=fill>
+				</a>
+				<br>
+				<a title=Facebook target=_blank href="https://www.facebook.com/redxpresskolkata">
+					<amp-img src=https://static.xx.fbcdn.net/rsrc.php/yo/r/iRmz9lCMBD2.ico layout=fill>
+				</a>
+				<a title=Instagram target=_blank href="https://www.instagram.com/redxpresskolkata/">
+					<amp-img src=https://www.instagram.com/static/images/ico/favicon.ico/36b3ee2d91ed.ico layout=fill>
+				</a>
+				<a title=GMail target=_blank href="mailto:contact@redxpresskolkata.com">
+					<amp-img src=https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico layout=fill>
+				</a>
+			</span>
+		</div>
+	</div>
+
+	<!-- buttons -->
+	<div class="buttonset">
+		<a class="button filled" target=_blank href="/menu">MENU</a>
+		<a class="button hollow" href="#gallery">GALLERY</a>		
+	</div>
+
+</header>
+

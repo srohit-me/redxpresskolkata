@@ -1,0 +1,82 @@
+<section id=offers>
+	<h1>EVENTS <i>&amp;</i> OFFERS</h1>
+	
+	<div class="wrapper">
+		<!-- Happy Hours -->
+		<div>
+			<div>
+				<amp-img layout=fill src="/img/happyhour.webp">
+					<amp-img fallback layout=fill src="/img/jpg/happyhour.jpg"></amp-img> 
+				</amp-img> 
+			</div>
+			<h4>Happy hours</h4>
+			<p>All drinks &mdash; <small>BUY 2, GET 1!</small> </p>
+			<span class="date">Everyday</span>
+			<span class="time">Till 8pm</span>
+		</div>
+		<!-- Buffet Lunch -->
+		<div>
+			<div>
+				<amp-img layout=fill src="/img/buffet-offer.webp">
+					<amp-img fallback layout=fill src="/img/jpg/buffet-offer.jpg"></amp-img> 
+				</amp-img> 
+			</div>
+			<h4>Buffet lunch &mdash; <sup>₹</sup>499</h4>
+			<p>All you can eat buffet of 15+ dishes</p>
+			<span class="date">Mon&ndash;Fri</span>
+			<span class="time">Lunch</span>
+		</div>
+		<!-- Valentines Day Lunch -->
+		{% assign diff = 'now' | date: '%s' | minus: 1613347140 %}
+		{% if diff < 0  %}
+		<div>
+			<div>
+				<amp-img layout=fill src="/img/valentines.webp">
+					<amp-img fallback layout=fill src="/img/jpg/valentines.jpg"></amp-img> 
+				</amp-img> 
+			</div>
+			<h4>Valentines day</h4>
+			<p>Special buffet lunch &amp; live music at night </p>
+			<span class="date">14 February</span>
+			<span class="time">All day</span>
+		</div>
+		{% endif %}
+		<!-- DJ / Live music -->
+		<div>
+			<div>
+				<amp-img layout=fill src="/img/music.webp">
+					<amp-img fallback layout=fill src="/img/jpg/music.jpg"></amp-img> 
+				</amp-img> 
+			</div>
+			<h4>DJ / Live music</h4>
+			<p> Fun-filled evenings with food, drinks, &amp; music </p>
+			<span class="date">Weekends / Events</span>
+			<span class="time">Evening</span>
+		</div>
+		<!-- IT & Red-Card  -->
+		<div>
+			<div>
+				<amp-img layout=fill src="/img/alacarte.webp">
+					<amp-img fallback layout=fill src="/img/jpg/alacarte.jpg"></amp-img> 
+				</amp-img> 
+			</div>
+			<h4>À-la-carte &mdash; 15% discount </h4>
+			<p>For all IT &amp; Red-Card customers</p>
+			<span class="date">All week</span>
+			<span class="time">All day</span>
+		</div>
+		<!-- Drinks Combo -->
+		<div>
+			<div>
+				<amp-img layout=fill src="/img/drinks.webp">
+					<amp-img fallback layout=fill src="/img/jpg/drinks.jpg"></amp-img> 
+				</amp-img> 
+			</div>
+			<h4>Drinks add-on &mdash; <sup>₹</sup>399 </h4>
+			<p>Four 30ml IMFL or 650ml beer</p>
+			<span class="date">All week</span>
+			<span class="time">All day</span>
+		</div>
+	</div>
+
+</section>

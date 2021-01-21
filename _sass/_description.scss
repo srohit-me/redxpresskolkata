@@ -1,0 +1,46 @@
+
+#description{
+	.text{
+		white-space: normal; text-align: left;
+		p{line-height: 2;}
+		h3{color:$highlight; margin: 0; }
+		.button.filled{transform: scale(0.9,0.9) }
+	}
+	.carousel{
+		min-width: 320px; 
+		max-width: 800px;
+
+	}
+
+	@media (min-width:801px){
+		padding: 2.5em 0;
+		section{
+			border-bottom: 1px solid $darkbg;
+			white-space: nowrap; text-align: center;
+			padding: 4em 0;
+			&:last-of-type{border:none;}
+			&>*{display: inline-block; vertical-align: middle;}
+ 			.text{margin-right: 8vw; width: 35vw; max-width: 800px;}
+			.carousel{height: 40vh; width: 40vw; max-height: 20rem;}
+		}
+	}
+	@media (max-width:800px) and (min-width: 500px){
+		section{
+			position: relative;
+			.text{
+				position: absolute; z-index: 10; 
+				bottom:-2em; left:0; right:0; 
+				width:320px; margin: 0 auto; padding: 2em;
+				text-align: center; background-color: $darkbg;
+			}
+			&:last-of-type .text{bottom:0;}
+			.carousel{width: 100vw; height: 30rem;}
+		}
+	}
+	@media (max-width: 499px) {
+		section {
+			.carousel{display: none;}
+			.text{width:unset; text-align: center; padding: 3em;}
+		}
+	}
+}

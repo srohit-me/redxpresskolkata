@@ -1,0 +1,63 @@
+$bgcolor: #18181d;
+$darkbg: darken($bgcolor,5%);
+$txtcolor: #d6d6d6;
+$highlight: #ca8e46;
+
+html,body{
+	font-family: 'Roboto', 'Lato', 'Open Sans', 'Source Sans Pro', 'Arial', sans-serif;
+	margin:0; padding:0; overflow-x: hidden;
+	background: $bgcolor; color:$txtcolor;
+}
+a{color: inherit; text-decoration: none; }
+
+
+amp-selector [option][selected]{outline: none;}
+
+nav{
+	position: fixed; bottom:0; left:0;  background: $darkbg;
+	display: flex; justify-content: center; align-items: center;
+	a{
+		display: block; opacity: 0.5; padding: 1em 2.5ch;
+		font-size: 0.75em; text-align: center; box-sizing: border-box;
+		&#logo, &[selected]{opacity: 1; }
+		svg {
+			display: block; fill:$txtcolor;
+			height: 2em; width: 2em; margin: 6px auto;
+		}
+	}
+}
+
+main{
+	section{
+		display: none;
+		&[selected]{display: block;}
+		position: relative;
+		height: 100vh; 
+		&#hookah, &#buffet{
+			&>div{height:100%; position: relative; margin: auto;}
+			img{object-fit: contain; max-height: 10rem;}
+		}
+	}
+
+}
+
+
+@media (orientation: landscape){
+	nav{flex-flow: column nowrap; top:0;}
+	nav	a{width: 100%; 
+		&#logo{margin-bottom: 1em;}
+		@media (max-height: 360px){
+			padding: 0.5em 2.5ch; 
+			&#logo{margin-bottom: 0;}
+		}
+	}	
+	main{
+		margin-left: 10ch;
+		#hookah>div{width: 40%;}
+		#buffet>div{width: 55%;}
+	}
+}
+@media (orientation: portrait){
+	nav{flex-flow: row nowrap; right:0;}
+	main{margin-bottom: 10ch;}
+}

@@ -1,0 +1,124 @@
+header{
+
+	background-color: $bgcolor;
+
+	// ----- CAROUSEL -----
+
+	.carousel{
+		height:33vh; width: 100vw;
+	}
+
+	// ----- LOGO -----
+
+	#logo{
+
+		position: relative; top:-3rem;
+		width:300px; margin:0 auto; padding: 1.5em 3.5em; 
+		background-color: $darkbg; white-space: nowrap; 
+		box-shadow: 0 1px 4px 0.5px black;
+		&>*{display: inline-block; vertical-align: middle;}
+		
+		// icon
+		&>amp-img{
+			margin-right: 3ch;
+			filter: brightness(125%);
+		}
+
+		// text
+		&>div{
+			font-size: 1.25em; line-height: 1.25;
+			&>i{font-size: 2em; display: block; font-weight: normal;}
+		}
+
+		@media (max-width:420px){
+			font-size: 0.85em; 
+			padding: 1.5em 2em;
+			&>img{margin-right:1.5ch;} 
+		}
+	}
+
+	// ----- INFO -----
+
+	.wrapper{
+
+		&>div>svg{
+			position: absolute;
+			left: 2.1ch; margin-top: 4px;
+			height: 1.5rem; width: 1.5rem;
+			fill: $highlight;
+		}
+
+		&>div{
+			box-shadow: 0px 0px 1px 0px black;
+			background-color: darken($bgcolor,1%);
+			width: 280px; margin-top: 0; // override defaults
+		}
+
+		// address
+		&>div:nth-of-type(1){
+			&>.button{
+				margin: .5rem 0 0 -20px;
+			}
+		}
+		// contact
+		&>div:nth-of-type(2){
+			line-height: 2.1;
+			&>span{display: block;}
+			&>span:first-of-type{margin-bottom: 1rem;}
+			span>span{font-size: smaller;}
+		}
+		// reach-us
+		&>div:nth-of-type(3){
+			span:first-of-type{
+				display: block;	
+				line-height: 1.5;
+				margin-bottom: 1rem;
+			}
+			a{
+				position: relative;
+				display: inline-block;
+				height: 27px; width: 27px;
+				margin: 0 10px 4px 0; 
+				border-radius: 6px;
+				overflow: hidden;
+				filter: contrast(1.25) brightness(0.85) saturate(90%);
+				&[title=Zomato]{
+					background: #ca2037;
+				}
+				&[title=Swiggy]{
+					background: #ff8e34;
+					img{filter: brightness(10000%); transform: scale(0.85);}
+				}
+				&[title=UberEats]{
+					background: #142328;
+				}
+				&[title=GMail]{
+					background: #142328;
+					img{transform: scale(0.8);}
+				}
+				&[title=Dineout]{background: #ce5e33;}
+				&[title=Facebook]{background: #2e5199;}
+				&[title=Instagram]{background: #c00e51;}
+
+			}
+		}
+
+		@media (min-width:850px) and (max-width:950px){
+			&>div{margin: 1em 1ch; width: 260px}
+			&>div>amp-img{left: 1.5ch;}
+		}
+
+		@media (max-width:850px){
+			display: block;
+			&>div{display: block; margin: 1em auto;}
+			margin-bottom: 2.5em;
+		}
+	}
+
+	// ------ BUTTON -----
+	.buttonset{
+		text-align: center;
+		margin: 1em 0 3em;
+		&>.button.filled{color: $bgcolor;}
+	}
+}

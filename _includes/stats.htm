@@ -1,0 +1,20 @@
+{% assign years = site.time | date: '%Y' | minus: 2002 %}
+
+<section id=stats class=cnd>
+	<div>
+		<h2>{{ years }}</h2>
+		<span>YEARS EXPERIENCE</span>
+	</div>
+	<div>
+		<h2>100<span>+</span></h2>
+		<span>DRINKS &AMP; COCKTAILS</span>
+	</div>
+	<div>
+		<h2>250<span>+</span></h2>
+		<span>DISH VARIETIES</span>
+	</div>
+	<div>
+		<h2>{{ years | times: 30 }}K<span>+</span></h2>
+		<span>CUSTOMERS SERVED</span>
+	</div>
+</section>

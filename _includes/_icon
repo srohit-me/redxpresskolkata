@@ -1,0 +1,2 @@
+{% capture svg %}{% include _icons/{{include.name}}.svg %}{% endcapture %}
+{{svg | replace_first: ' xmlns="http://www.w3.org/2000/svg"', ""}}

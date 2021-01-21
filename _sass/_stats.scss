@@ -1,0 +1,21 @@
+#stats{
+	color: $bgcolor;
+	text-align: center; 
+	background-color: $highlight; 
+	padding: 10px 0;
+	&>div{
+		display: inline-block; vertical-align: middle;
+		width: 128px; margin: 1em 2ch;
+		
+		text-align: center;
+		font-weight: bold;
+		&>span{font-size: 0.85em}
+		&>h2{
+			font-size: 2.5em; margin: 0;
+			&>span{font-weight: 100;}
+		}
+
+	}
+	@media (max-width:720px){padding: 10px 20vw; }
+	@media (max-width:550px){padding: 10px 10vw}
+}

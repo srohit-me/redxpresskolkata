@@ -1,0 +1,44 @@
+#contact{
+	padding: 3em 10%;
+	background-color: $darkbg;
+	display: flex; flex-flow: row nowrap;
+	line-height: 2;
+	// form
+	&>form{
+		width: 30%;
+		min-width: 300px;
+		margin-right: 10%;
+		h2{color: $highlight}
+		input{
+			outline: 0; border:0;
+			width: 80%;
+			font:inherit; color: inherit; 
+			background: transparent none;
+			border-bottom: 1px solid $highlight; 
+			&:focus{border-bottom: 1px solid $txtcolor;}
+		}
+		button{
+			height: 2rem; width: 2rem; border-radius:100%;
+			outline: 0; border:0;
+			cursor: pointer;
+			padding: 2px 0 0 2px; margin: 0;
+			&>svg{fill:$darkbg; height: 60%;}
+		}
+	}
+	// map
+	&>div{
+		flex-grow:1;
+		position: relative;
+	}
+	@media (max-width: 900px){
+		padding: 3em 5%;
+		&>form{margin-right: 5%;}
+	}
+	@media (max-width: 720px){
+		flex-direction: column;
+		&>form{
+			margin: auto;
+			margin-bottom: 3em;
+		}
+	}
+}

@@ -1,0 +1,103 @@
+<section id="description">
+
+	<section>
+		<div class=text>
+			<h3><i>The</i> FOOD</h3>
+			<p>
+				Red Xpress offers our patrons a
+				superlative dining experience with the finest in food, service
+				& ambience. Our menu is an opulent parade of
+				flavours from Indian, Mughlai, &amp; Oriental cuisines.
+			</p>			
+			<div class="buttonset">
+				<a class="button filled" target=_blank href="/menu">MENU</a>
+				<a class="button hollow" target=_blank href="/menu#buffet">BUFFET</a>		
+			</div>
+		</div>
+		<!-- carousel -->
+		<div class="carousel">
+			<amp-carousel lightbox layout="fill" type="slides" autoplay>
+				{% for i in (18..28) %}
+				<div>
+					<amp-img lightbox layout="fill" 
+							src=	"/img/{{i}}.webp" 
+							srcset=	"/img/s{{i}}.webp 480w, 
+									 /img/{{i}}.webp 1920w" >
+						<amp-img fallback layout="fill" 
+							src=	"/img/jpg/{{i}}.jpg" 
+							srcset= "/img/jpg/s{{i}}.jpg 480w, 
+									 /img/jpg/{{i}}.jpg 1920w">
+						</amp-img>
+					</amp-img>
+				</div>
+				{% endfor %}
+			</amp-carousel>
+		</div>
+	</section>
+
+	<section>
+		<div class=text>
+			<h3><i>The</i> BAR</h3>
+			<p>
+				Red Xpress offers the finest collection of
+				ice-cold beers, tempting wines, handsome whiskys,
+				flavourful liqueurs, mouth-watering cocktails,
+				refreshing mocktails, and more &hellip;
+			</p>
+			<div class="buttonset">
+				<a class="button filled" target=_blank href="/menu#bar">DRINKS</a>
+				<a class="button hollow" target=_blank href="/menu#hookah">HOOKAH</a>		
+			</div>
+		</div>
+		<!-- carousel -->
+		<div class="carousel">
+			<amp-carousel lightbox layout="fill" type="slides" autoplay>
+				{% for i in (9..17) %}
+				<div>
+					<amp-img lightbox layout="fill" 
+							src=	"/img/{{i}}.webp" 
+							srcset=	"/img/s{{i}}.webp 480w, 
+									 /img/{{i}}.webp 1920w" >
+						<amp-img fallback layout="fill" 
+							src=	"/img/jpg/{{i}}.jpg" 
+							srcset= "/img/jpg/s{{i}}.jpg 480w, 
+									 /img/jpg/{{i}}.jpg 1920w">
+						</amp-img>
+					</amp-img>
+				</div>
+				{% endfor %}
+			</amp-carousel>
+		</div>
+	</section>
+
+	<section>
+		<div class=text>
+			<h3><i>The</i> AMBIANCE</h3>
+			<p>Red Xpress has been a connoisseur of food and hospitality for twenty years. We offer an exquisite ambiance complete with a bar & lounge, lawn seating, projector, TV, &amp; more &hellip;</p>
+			<div class="buttonset">
+				<a class="button filled" href="#contact">RESERVE</a>		
+				<a class="button hollow" href="#gallery">GALLERY</a>
+			</div>	
+		</div>
+		<!-- carousel -->
+		<div class="carousel">
+			<amp-carousel lightbox layout="fill" type="slides" autoplay>
+				{% for i in (1..8) %}
+				<div>
+					<amp-img lightbox layout="fill" 
+							src=	"/img/{{i}}.webp" 
+							srcset=	"/img/s{{i}}.webp 480w, 
+									 /img/{{i}}.webp 1920w" >
+						<amp-img fallback layout="fill" 
+							src=	"/img/jpg/{{i}}.jpg" 
+							srcset= "/img/jpg/s{{i}}.jpg 480w, 
+									 /img/jpg/{{i}}.jpg 1920w">
+						</amp-img>
+					</amp-img>
+				</div>
+				{% endfor %}
+			</amp-carousel>
+		</div>
+	</section>
+
+</section>
