@@ -87,7 +87,8 @@ header{
 				}
 				&[title=Swiggy]{
 					background: #ff8e34;
-					img{filter: brightness(10000%); transform: scale(0.85);}
+					text-align: center;
+					svg{height: 80%; margin-top:10%;}
 				}
 				&[title=UberEats]{
 					background: #142328;
